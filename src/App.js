@@ -19,6 +19,11 @@ import {
 //   createNote as createNoteMutation,
 //   deleteNote as deleteNoteMutation,
 // } from "./graphql/mutations";
+import {
+  CS,
+  Contact,
+  Home
+} from "./components/index.js";
 
 const App = () => {
  // const [notes, setNotes] = useState([]);
