@@ -24,6 +24,11 @@ import {
   Contact,
   Home
 } from "./components/index.js";
+import {
+  Routes,
+  Route,
+  Link as RL 
+} from "react-router-dom";
 
 const App = () => {
  // const [notes, setNotes] = useState([]);
@@ -91,6 +96,11 @@ const App = () => {
           </View>
         </Flex>
       </View>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cs" element={<CS />} />
+      </Routes>
     </View>
   );
 };
