@@ -113,11 +113,17 @@ const App = () => {
       </View>
       <View as="footer">
         <Flex justifyContent="center">
-          <FontAwesomeIcon icon={brands('linkedin')} />
-          <FontAwesomeIcon icon={brands('github')} />
-          <FontAwesomeIcon icon={regular('envelope')} />
+          <Link href="https://www.linkedin.com/in/hogan-sherrow-13421321a/">
+            <FontAwesomeIcon icon={brands('linkedin')} />
+          </Link>
+          <Link href="https://www.github.com/hoganrsherrow">
+            <FontAwesomeIcon icon={brands('github')} />
+          </Link>
+          <Link href="mailto:hogan.r.sherrow@vanderbilt.edu">
+            <FontAwesomeIcon icon={regular('envelope')} />
+          </Link>
         </Flex>
-        <View>Copyright 2022</View>
+        <View>&copy; 2022</View>
       </View>
     </View>
   );
