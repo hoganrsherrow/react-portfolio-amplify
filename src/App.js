@@ -4,6 +4,7 @@ import "@aws-amplify/ui-react/styles.css";
 import { API } from "aws-amplify";
 import {
   Button,
+  Divider,
   Flex,
   Heading,
   Link,
@@ -76,24 +77,23 @@ const App = () => {
           alignItems="center"
           wrap="nowrap">
           <Heading level={1}>Hogan</Heading>
-          <View>
-            <Tabs
-              currentIndex="0"
-              justifyContent="flex-start">
-              <TabItem title="Home">
-                Home
-              </TabItem>
-              <TabItem title="Portfolio">
-                Portfolio
-              </TabItem>
-              <TabItem title="Contact">
-                Contact Me
-              </TabItem>
-              <TabItem title="Computer Science">
-                How's my DS & Algo?
-              </TabItem>
-              </Tabs>
-          </View>
+          <Flex
+            direction="row"
+            justifyContent="space-around"
+            alignItems="center"
+            wrap="nowrap">
+                <View>
+                  <RL>HOME</RL>
+                </View>
+                <Divider orientation="vertical" />
+                <View>
+                  <RL>CONTACT</RL>
+                </View>
+                <Divider orientation="vertical" />
+                <View>
+                  <RL>CS</RL>
+                </View>
+            </Flex>
         </Flex>
       </View>
       <Routes>
