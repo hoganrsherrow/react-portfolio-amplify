@@ -30,6 +30,14 @@ import {
   Route,
   Link as RL 
 } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  solid,
+  regular,
+  brands,
+  icon
+} from "@fortawesome/fontawesome-svg-core/import.macro";
+
 
 const App = () => {
  // const [notes, setNotes] = useState([]);
@@ -96,11 +104,21 @@ const App = () => {
             </Flex>
         </Flex>
       </View>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/cs" element={<CS />} />
-      </Routes>
+      <View as="main">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/cs" element={<CS />} />
+        </Routes>
+      </View>
+      <View as="footer">
+        <Flex justifyContent="center">
+          <FontAwesomeIcon icon={brands('linkedin')} />
+          <FontAwesomeIcon icon={brands('github')} />
+          <FontAwesomeIcon icon={regular('envelope')} />
+        </Flex>
+        <View>Copyright 2022</View>
+      </View>
     </View>
   );
 };
