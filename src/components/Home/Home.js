@@ -17,7 +17,42 @@ import {
 
 const Home = () => {
     return (
-        <View as="body">This is the Home section.</View>
+      <View as="main">
+        <View
+          as="section"
+          className="portfolio-container">
+            <Flex
+              justifyContent="space-around"
+              alignItems="center"
+              wrap="wrap">
+                <View
+                flex-basis="25%"
+                className="portfolio-item">
+                  Portfolio item 1
+                </View>
+                <View
+                flex-basis="50%"
+                className="portfolio-item emphasized-portfolio-item">
+                  Portfolio item 2
+                </View>
+                <View
+                flex-basis="25%"
+                className="portfolio-item">
+                  Portfolio item 3
+                </View>
+            </Flex>
+        </View>
+        <View
+          as="section"
+          className="about-website">
+            This will contain info about the website and features to come.
+        </View>
+        <View
+          as="section"
+          className="about-me">
+            This will contain information about me such as skills, background, preparation, and moving forward.
+        </View>
+      </View>
     )
 }
 

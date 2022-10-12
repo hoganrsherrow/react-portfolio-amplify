@@ -93,24 +93,22 @@ const App = () => {
                 <View>
                   <RL>HOME</RL>
                 </View>
-                <Divider orientation="vertical" />
+                {/* <Divider orientation="vertical" />
                 <View>
                   <RL>CONTACT</RL>
                 </View>
                 <Divider orientation="vertical" />
                 <View>
                   <RL>CS</RL>
-                </View>
+                </View> */}
             </Flex>
         </Flex>
       </View>
-      <View as="main">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/cs" element={<CS />} />
-        </Routes>
-      </View>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cs" element={<CS />} />
+      </Routes>
       <View as="footer">
         <Flex justifyContent="center">
           <Link href="https://www.linkedin.com/in/hogan-sherrow-13421321a/">
