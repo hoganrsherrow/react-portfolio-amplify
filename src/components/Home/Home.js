@@ -6,6 +6,7 @@ import {
   Button,
   Flex,
   Heading,
+  Image,
   Link,
   Tabs,
   TabItem,
@@ -14,6 +15,8 @@ import {
   View,
   withAuthenticator,
 } from "@aws-amplify/ui-react";
+import spaceapp from "./spaceapp.png";
+
 
 const Home = () => {
     return (
@@ -28,7 +31,10 @@ const Home = () => {
                 <View
                 flex-basis="25%"
                 className="portfolio-item">
-                  Portfolio item 1
+                <View
+                  as="img"
+                  src={spaceapp}
+                  alt="spaceapp" />
                 </View>
                 <View
                 flex-basis="50%"
