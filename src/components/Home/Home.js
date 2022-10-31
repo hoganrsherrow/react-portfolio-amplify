@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-//import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
+import "../../App.css";
 import { API } from "aws-amplify";
 import {
   Button,
@@ -14,8 +14,11 @@ import {
   TextField,
   View,
   withAuthenticator,
+  Divider,
 } from "@aws-amplify/ui-react";
-import spaceapp from "./spaceapp.png";
+import spaceapppng from "../../images/spaceapp.png";
+import decisionassistantpng from "../../images/decision-assistant.PNG";
+import doitnowpng from "../../images/do-it-now.PNG";
 
 
 const Home = () => {
@@ -24,27 +27,62 @@ const Home = () => {
         <View
           as="section"
           className="portfolio-container">
+            <Heading
+              level={3}
+              className="portfolio-heading">
+                Projects
+            </Heading>
+            <Divider
+              className="divider"
+              orientation="horizontal" />
             <Flex
               justifyContent="space-around"
               alignItems="center"
-              wrap="wrap">
+              wrap="nowrap">
                 <View
-                flex-basis="25%"
-                className="portfolio-item">
-                <View
-                  as="img"
-                  src={spaceapp}
-                  alt="spaceapp" />
+                  className="portfolio-item">
+                    <Heading
+                      level={6}
+                      className="portfolio-heading">
+                        Space App
+                    </Heading>
+                    <Link
+                      href="https://carterwsheppard.github.io/space-app/">
+                        <Image
+                          alt="spaceapp screenshot"
+                          className="portfolio-img"
+                          src={spaceapppng} />
+                    </Link>
                 </View>
                 <View
-                flex-basis="50%"
-                className="portfolio-item emphasized-portfolio-item">
-                  Portfolio item 2
+                  className="portfolio-item">
+                    <Heading
+                      level={6}
+                      className="portfolio-heading">
+                        Decision Assistant
+                    </Heading>
+                    <Link
+                      href="https://decision-assistant.herokuapp.com/">
+                        <Image
+                          alt="decision-assistant screenshot"
+                          className="portfolio-img"
+                          src={decisionassistantpng} />
+                    </Link>
                 </View>
                 <View
-                flex-basis="25%"
-                className="portfolio-item">
-                  Portfolio item 3
+                  className="portfolio-item">
+                    <Heading
+                      level={6}
+                      className="portfolio-heading">
+                        Do It Now
+                    </Heading>
+                    <Link
+                      href="https://bensdoitnow.herokuapp.com/">
+                        <Image
+                          alt="do-it-now screenshot"
+                          className="portfolio-img"
+                          src={doitnowpng} />
+                    </Link>
                 </View>
             </Flex>
         </View>

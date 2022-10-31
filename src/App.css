@@ -1,3 +1,83 @@
+/* === Variables === */
+:root {
+  --primary-color: #323232;
+  --secondary-color: #14FFEC;
+  --tertiary-color: #212121;
+  --quarternary-color: #087A91;
+}
+
+
+/* === Variables End === */
+
+/* === General === */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.divider {
+  border-color: var(--secondary-color);
+  margin: auto;
+  margin-bottom: 1rem;
+  width: 67%;
+}
+
+h3 {
+  color: var(--quarternary-color);
+}
+
+/* === General End === */
+
+/* === Header Start === */
+header {
+  color: white;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+.profile-picture {
+  flex-basis: 25%;
+  border-radius: 50%;
+}
+
+/* === Header End === */
+
+
+/* === Portfolio === */
+.portfolio-heading {
+  color: var(--quarternary-color);
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-img {
+  border: 1px solid white;
+  border-radius: 5%;
+}
+
+.portfolio-item {
+  background-color: var(--tertiary-color);
+  border: 1px solid var(--quarternary-color);
+  border-radius: 5%;
+  flex-basis: 25%;
+  padding: 5px 5px 1px 5px;
+}
+
+.emphasized-portfolio-item {
+  flex-basis: 50%;
+}
+/* === Portfolio End === */
+
+
+
+
 .App {
   text-align: center;
 }

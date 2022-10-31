@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
+import "./App.css";
 import { API } from "aws-amplify";
 import {
   Button,
   Divider,
   Flex,
   Heading,
+  Image,
   Link,
   Tabs,
   TabItem,
@@ -37,6 +38,7 @@ import {
   brands,
   icon
 } from "@fortawesome/fontawesome-svg-core/import.macro";
+import profilepicture from "./images/profile-picture.png";
 
 
 const App = () => {
@@ -79,30 +81,23 @@ const App = () => {
   return (
     <View className="App">
       <View as="header">
-        <Flex
-          direction="row"
-          justifyContent="space-between"
-          alignItems="center"
-          wrap="nowrap">
-          <Heading level={1}>Hogan</Heading>
-          <Flex
-            direction="row"
-            justifyContent="space-around"
-            alignItems="center"
-            wrap="nowrap">
-                <View>
-                  <RL>HOME</RL>
-                </View>
-                {/* <Divider orientation="vertical" />
-                <View>
-                  <RL>CONTACT</RL>
-                </View>
-                <Divider orientation="vertical" />
-                <View>
-                  <RL>CS</RL>
-                </View> */}
-            </Flex>
-        </Flex>
+            <Flex
+              direction="row"
+              justifyContent="space-around"
+              alignItems="center"
+              wrap="nowrap">
+                  <View>
+                    <RL>HOME</RL>
+                  </View>
+                  {/* <Divider orientation="vertical" />
+                  <View>
+                    <RL>CONTACT</RL>
+                  </View>
+                  <Divider orientation="vertical" />
+                  <View>
+                    <RL>CS</RL>
+                  </View> */}
+              </Flex>
       </View>
       <Routes>
         <Route path="/" element={<Home />} />
