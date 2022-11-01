@@ -17,8 +17,8 @@ import {
   Divider,
 } from "@aws-amplify/ui-react";
 import spaceapppng from "../../images/spaceapp.png";
-import decisionassistantpng from "../../images/decision-assistant.PNG";
-import doitnowpng from "../../images/do-it-now.PNG";
+import decisionassistantpng from "../../images/decision-assistant.png";
+import doitnowpng from "../../images/do-it-now.png";
 
 
 const Home = () => {
@@ -35,7 +35,125 @@ const Home = () => {
             <Divider
               className="divider"
               orientation="horizontal" />
+            <Heading
+              className="portfolio-heading"
+              level={4}>
+                Personal Projects
+            </Heading>
             <Flex
+              className="project-grouping"
+              justifyContent="space-around"
+              alignItems="center"
+              wrap="nowrap">
+                <View
+                  className="portfolio-item">
+                    <Heading
+                      level={6}
+                      className="portfolio-heading">
+                        Space App
+                    </Heading>
+                    <Link
+                      href="https://carterwsheppard.github.io/space-app/">
+                        <Image
+                          alt="spaceapp screenshot"
+                          className="portfolio-img"
+                          src={spaceapppng} />
+                    </Link>
+                </View>
+                <View
+                  className="portfolio-item">
+                    <Heading
+                      level={6}
+                      className="portfolio-heading">
+                        Decision Assistant
+                    </Heading>
+                    <Link
+                      href="https://decision-assistant.herokuapp.com/">
+                        <Image
+                          alt="decision-assistant screenshot"
+                          className="portfolio-img"
+                          src={decisionassistantpng} />
+                    </Link>
+                </View>
+                <View
+                  className="portfolio-item">
+                    <Heading
+                      level={6}
+                      className="portfolio-heading">
+                        Do It Now
+                    </Heading>
+                    <Link
+                      href="https://bensdoitnow.herokuapp.com/">
+                        <Image
+                          alt="do-it-now screenshot"
+                          className="portfolio-img"
+                          src={doitnowpng} />
+                    </Link>
+                </View>
+            </Flex>
+            <Heading
+              className="portfolio-heading"
+              level={4}>
+                Bootcamp Projects
+            </Heading>
+            <Flex
+              className="project-grouping"
+              justifyContent="space-around"
+              alignItems="center"
+              wrap="nowrap">
+                <View
+                  className="portfolio-item">
+                    <Heading
+                      level={6}
+                      className="portfolio-heading">
+                        Space App
+                    </Heading>
+                    <Link
+                      href="https://carterwsheppard.github.io/space-app/">
+                        <Image
+                          alt="spaceapp screenshot"
+                          className="portfolio-img"
+                          src={spaceapppng} />
+                    </Link>
+                </View>
+                <View
+                  className="portfolio-item">
+                    <Heading
+                      level={6}
+                      className="portfolio-heading">
+                        Decision Assistant
+                    </Heading>
+                    <Link
+                      href="https://decision-assistant.herokuapp.com/">
+                        <Image
+                          alt="decision-assistant screenshot"
+                          className="portfolio-img"
+                          src={decisionassistantpng} />
+                    </Link>
+                </View>
+                <View
+                  className="portfolio-item">
+                    <Heading
+                      level={6}
+                      className="portfolio-heading">
+                        Do It Now
+                    </Heading>
+                    <Link
+                      href="https://bensdoitnow.herokuapp.com/">
+                        <Image
+                          alt="do-it-now screenshot"
+                          className="portfolio-img"
+                          src={doitnowpng} />
+                    </Link>
+                </View>
+            </Flex>
+            <Heading
+              className="portfolio-heading"
+              level={4}>
+                Group Projects
+            </Heading>
+            <Flex
+              className="project-grouping"
               justifyContent="space-around"
               alignItems="center"
               wrap="nowrap">

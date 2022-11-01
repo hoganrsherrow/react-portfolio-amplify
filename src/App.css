@@ -27,7 +27,7 @@ body {
   width: 67%;
 }
 
-h3 {
+h2, h3, h4, h5, h6 {
   color: var(--quarternary-color);
 }
 
@@ -72,6 +72,10 @@ header a {
 
 .emphasized-portfolio-item {
   flex-basis: 50%;
+}
+
+.project-grouping {
+  margin-bottom: 1rem;
 }
 /* === Portfolio End === */
 
