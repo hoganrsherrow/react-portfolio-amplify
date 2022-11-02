@@ -1,107 +1,125 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
+import "./App.css";
 import { API } from "aws-amplify";
 import {
   Button,
+  Divider,
   Flex,
   Heading,
+  Image,
+  Link,
+  Tabs,
+  TabItem,
   Text,
   TextField,
   View,
   withAuthenticator,
 } from "@aws-amplify/ui-react";
-import { listNotes } from "./graphql/queries";
+// import { listNotes } from "./graphql/queries";
+// import {
+//   createNote as createNoteMutation,
+//   deleteNote as deleteNoteMutation,
+// } from "./graphql/mutations";
 import {
-  createNote as createNoteMutation,
-  deleteNote as deleteNoteMutation,
-} from "./graphql/mutations";
+  CS,
+  Contact,
+  Home
+} from "./components/index.js";
+import {
+  Routes,
+  Route,
+  Link as RL 
+} from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  solid,
+  regular,
+  brands,
+  icon
+} from "@fortawesome/fontawesome-svg-core/import.macro";
+import profilepicture from "./images/profile-picture.png";
 
-const App = ({ signOut }) => {
-  const [notes, setNotes] = useState([]);
 
-  useEffect(() => {
-    fetchNotes();
-  }, []);
+const App = () => {
+ // const [notes, setNotes] = useState([]);
 
-  async function fetchNotes() {
-    const apiData = await API.graphql({ query: listNotes });
-    const notesFromAPI = apiData.data.listNotes.items;
-    setNotes(notesFromAPI);
-  }
+  // useEffect(() => {
+  //   fetchNotes();
+  // }, []);
 
-  async function createNote(event) {
-    event.preventDefault();
-    const form = new FormData(event.target);
-    const data = {
-      name: form.get("name"),
-      description: form.get("description"),
-    };
-    await API.graphql({
-      query: createNoteMutation,
-      variables: { input: data },
-    });
-    fetchNotes();
-    event.target.reset();
-  }
+  // async function fetchNotes() {
+  //   const apiData = await API.graphql({ query: listNotes });
+  //   const notesFromAPI = apiData.data.listNotes.items;
+  //   setNotes(notesFromAPI);
+  // }
 
-  async function deleteNote({ id }) {
-    const newNotes = notes.filter((note) => note.id !== id);
-    setNotes(newNotes);
-    await API.graphql({
-      query: deleteNoteMutation,
-      variables: { input: { id } },
-    });
-  }
+  // async function createNote(event) {
+  //   event.preventDefault();
+  //   const form = new FormData(event.target);
+  //   const data = {
+  //     name: form.get("name"),
+  //     description: form.get("description"),
+  //   };
+  //   await API.graphql({
+  //     query: createNoteMutation,
+  //     variables: { input: data },
+  //   });
+  //   fetchNotes();
+  //   event.target.reset();
+  // }
+
+  // async function deleteNote({ id }) {
+  //   const newNotes = notes.filter((note) => note.id !== id);
+  //   setNotes(newNotes);
+  //   await API.graphql({
+  //     query: deleteNoteMutation,
+  //     variables: { input: { id } },
+  //   });
+  // }
 
   return (
     <View className="App">
-      <Heading level={1}>My Notes App</Heading>
-      <View as="form" margin="3rem 0" onSubmit={createNote}>
-        <Flex direction="row" justifyContent="center">
-          <TextField
-            name="name"
-            placeholder="Note Name"
-            label="Note Name"
-            labelHidden
-            variation="quiet"
-            required
-          />
-          <TextField
-            name="description"
-            placeholder="Note Description"
-            label="Note Description"
-            labelHidden
-            variation="quiet"
-            required
-          />
-          <Button type="submit" variation="primary">
-            Create Note
-          </Button>
+      <View as="header">
+            <Flex
+              direction="row"
+              justifyContent="space-around"
+              alignItems="center"
+              wrap="nowrap">
+                  <View>
+                    <RL>HOME</RL>
+                  </View>
+                  {/* <Divider orientation="vertical" />
+                  <View>
+                    <RL>CONTACT</RL>
+                  </View>
+                  <Divider orientation="vertical" />
+                  <View>
+                    <RL>CS</RL>
+                  </View> */}
+              </Flex>
+      </View>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cs" element={<CS />} />
+      </Routes>
+      <View as="footer">
+        <Flex justifyContent="center">
+          <Link href="https://www.linkedin.com/in/hogan-sherrow-13421321a/">
+            <FontAwesomeIcon icon={brands('linkedin')} />
+          </Link>
+          <Link href="https://www.github.com/hoganrsherrow">
+            <FontAwesomeIcon icon={brands('github')} />
+          </Link>
+          <Link href="mailto:hogan.r.sherrow@vanderbilt.edu">
+            <FontAwesomeIcon icon={regular('envelope')} />
+          </Link>
         </Flex>
+        <View>&copy; 2022</View>
       </View>
-      <Heading level={2}>Current Notes</Heading>
-      <View margin="3rem 0">
-        {notes.map((note) => (
-          <Flex
-            key={note.id || note.name}
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Text as="strong" fontWeight={700}>
-              {note.name}
-            </Text>
-            <Text as="span">{note.description}</Text>
-            <Button variation="link" onClick={() => deleteNote(note)}>
-              Delete note
-            </Button>
-          </Flex>
-        ))}
-      </View>
-      <Button onClick={signOut}>Sign Out</Button>
     </View>
   );
 };
 
-export default withAuthenticator(App);
+export default App;
