@@ -38,7 +38,7 @@ const Home = () => {
             <Heading
               className="portfolio-heading"
               level={4}>
-                Personal Projects
+                AI
             </Heading>
             <Flex
               className="project-grouping"
@@ -94,7 +94,7 @@ const Home = () => {
             <Heading
               className="portfolio-heading"
               level={4}>
-                CMS Projects
+                Full Stack
             </Heading>
             <Flex
               className="project-grouping"
@@ -150,7 +150,7 @@ const Home = () => {
             <Heading
               className="portfolio-heading"
               level={4}>
-                Bootcamp Projects
+                Backend
             </Heading>
             <Flex
               className="project-grouping"
@@ -206,7 +206,7 @@ const Home = () => {
             <Heading
               className="portfolio-heading"
               level={4}>
-                Group Projects
+                Frontend
             </Heading>
             <Flex
               className="project-grouping"
