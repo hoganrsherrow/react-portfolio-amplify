@@ -19,6 +19,9 @@ import {
 import spaceapppng from "../../images/spaceapp.png";
 import decisionassistantpng from "../../images/decision-assistant.png";
 import doitnowpng from "../../images/do-it-now.png";
+import readme from "../../images/readme-generator.png";
+import teamprofile from "../../images/team-profile-generator.png";
+import employeetracker from "../../images/employee-tracker.png";
 
 
 const Home = () => {
@@ -162,14 +165,14 @@ const Home = () => {
                     <Heading
                       level={6}
                       className="portfolio-heading">
-                        Weather App
+                        README Generator
                     </Heading>
                     <Link
-                      href="https://carterwsheppard.github.io/space-app/">
+                      href="https://github.com/hoganrsherrow/readme-generator">
                         <Image
-                          alt="spaceapp screenshot"
+                          alt="readme-generator screenshot"
                           className="portfolio-img"
-                          src={spaceapppng} />
+                          src={readme} />
                     </Link>
                 </View>
                 <View
@@ -177,14 +180,14 @@ const Home = () => {
                     <Heading
                       level={6}
                       className="portfolio-heading">
-                        CMS Project
+                        Team Profile Generator
                     </Heading>
                     <Link
-                      href="https://decision-assistant.herokuapp.com/">
+                      href="https://github.com/hoganrsherrow/team-profile-generator">
                         <Image
-                          alt="decision-assistant screenshot"
+                          alt="team-profile-generator screenshot"
                           className="portfolio-img"
-                          src={decisionassistantpng} />
+                          src={teamprofile} />
                     </Link>
                 </View>
                 <View
@@ -192,14 +195,14 @@ const Home = () => {
                     <Heading
                       level={6}
                       className="portfolio-heading">
-                        Search Engine Project
+                        Employee Tracker
                     </Heading>
                     <Link
-                      href="https://bensdoitnow.herokuapp.com/">
+                      href="https://github.com/hoganrsherrow/employee-tracker">
                         <Image
                           alt="do-it-now screenshot"
                           className="portfolio-img"
-                          src={doitnowpng} />
+                          src={employeetracker} />
                     </Link>
                 </View>
             </Flex>
