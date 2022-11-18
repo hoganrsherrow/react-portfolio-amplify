@@ -81,7 +81,17 @@ const App = () => {
   return (
     <View className="App">
       <View as="header">
-            <Flex
+        <Heading
+          className="name"
+          level={1}>
+            Hogan Sherrow
+        </Heading>
+        <Heading
+          className="title"
+          level={4}>
+            Developer for Hire.
+        </Heading>
+            {/* <Flex
               direction="row"
               justifyContent="space-around"
               alignItems="center"
@@ -89,15 +99,15 @@ const App = () => {
                   <View>
                     <RL>HOME</RL>
                   </View>
-                  {/* <Divider orientation="vertical" />
+                  <Divider orientation="vertical" />
                   <View>
                     <RL>CONTACT</RL>
                   </View>
                   <Divider orientation="vertical" />
                   <View>
                     <RL>CS</RL>
-                  </View> */}
-              </Flex>
+                  </View>
+              </Flex> */}
       </View>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -105,15 +115,15 @@ const App = () => {
         <Route path="/cs" element={<CS />} />
       </Routes>
       <View as="footer">
-        <Flex justifyContent="center">
+        <Flex justifyContent="center" className="icons">
           <Link href="https://www.linkedin.com/in/hogan-sherrow-13421321a/">
-            <FontAwesomeIcon icon={brands('linkedin')} />
+            <FontAwesomeIcon className="icon" icon={brands('linkedin')} />
           </Link>
           <Link href="https://www.github.com/hoganrsherrow">
-            <FontAwesomeIcon icon={brands('github')} />
+            <FontAwesomeIcon className="icon" icon={brands('github')} />
           </Link>
           <Link href="mailto:hogan.r.sherrow@vanderbilt.edu">
-            <FontAwesomeIcon icon={regular('envelope')} />
+            <FontAwesomeIcon className="icon" icon={regular('envelope')} />
           </Link>
         </Flex>
         <View>&copy; 2022</View>
