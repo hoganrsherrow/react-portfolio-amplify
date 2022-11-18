@@ -13,6 +13,8 @@
 
 * {
   box-sizing: border-box;
+  text-align: center;
+  color: var(--secondary-color);
 }
 
 body {
@@ -36,11 +38,20 @@ h2, h3, h4, h5, h6 {
 /* === Header Start === */
 header {
   color: white;
+  margin-bottom: 1.0rem;
 }
 
 header a {
   color: white;
   text-decoration: none;
+}
+
+.name {
+  color: var(--secondary-color);
+}
+
+.title {
+  color: white;
 }
 
 .profile-picture {
@@ -52,6 +63,14 @@ header a {
 
 
 /* === Portfolio === */
+.about-me {
+  margin-top: 1.5rem;
+  padding: 0 0.5rem;
+}
+.about-website {
+  margin-top: 0.5rem;
+  padding: 0 0.5rem;
+}
 .portfolio-heading {
   color: var(--quarternary-color);
   margin-bottom: 0.5rem;
@@ -77,12 +96,32 @@ header a {
 .project-grouping {
   margin-bottom: 1rem;
 }
+
+p {
+  color: var(--secondary-color) !important;
+}
 /* === Portfolio End === */
 
+/* === Footer === */
+footer {
+  margin-top: 1.0rem;
+}
+
+/* .icons {
+  padding-right: 5% !important;
+} */
+
+.icon {
+  height: 30px;
+  width: 25px;
+  margin-right: 5px; 
+}
+
+/* === Footer End === */
 
 
 
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -119,4 +158,4 @@ header a {
   to {
     transform: rotate(360deg);
   }
-}
+} */

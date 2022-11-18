@@ -22,6 +22,9 @@ import doitnowpng from "../../images/do-it-now.png";
 import readme from "../../images/readme-generator.png";
 import teamprofile from "../../images/team-profile-generator.png";
 import employeetracker from "../../images/employee-tracker.png";
+import selfDrivingCar from "../../images/self-driving-car.png";
+import dailyPlanner from "../../images/daily-planner.png";
+import openWeather from "../../images/open-weather.png";
 
 
 const Home = () => {
@@ -56,14 +59,14 @@ const Home = () => {
                         Self-Driving Car
                     </Heading>
                     <Link
-                      href="https://carterwsheppard.github.io/space-app/">
+                      href="https://hoganrsherrow.github.io/self-driving-car-js/">
                         <Image
                           alt="spaceapp screenshot"
                           className="portfolio-img"
-                          src={spaceapppng} />
+                          src={selfDrivingCar} />
                     </Link>
                 </View>
-                <View
+                {/* <View
                   className="portfolio-item">
                     <Heading
                       level={6}
@@ -92,7 +95,7 @@ const Home = () => {
                           className="portfolio-img"
                           src={doitnowpng} />
                     </Link>
-                </View>
+                </View> */}
             </Flex>
             <Heading
               className="portfolio-heading"
@@ -124,7 +127,7 @@ const Home = () => {
                     <Heading
                       level={6}
                       className="portfolio-heading">
-                        Java/Springboot
+                        Decision Assistant
                     </Heading>
                     <Link
                       href="https://decision-assistant.herokuapp.com/">
@@ -139,7 +142,7 @@ const Home = () => {
                     <Heading
                       level={6}
                       className="portfolio-heading">
-                        Python/Django
+                        Do It Now
                     </Heading>
                     <Link
                       href="https://bensdoitnow.herokuapp.com/">
@@ -236,14 +239,14 @@ const Home = () => {
                     <Heading
                       level={6}
                       className="portfolio-heading">
-                        Decision Assistant
+                        Daily Planner
                     </Heading>
                     <Link
-                      href="https://decision-assistant.herokuapp.com/">
+                      href="https://hoganrsherrow.github.io/daily-planner/">
                         <Image
-                          alt="decision-assistant screenshot"
+                          alt="daily planner screenshot"
                           className="portfolio-img"
-                          src={decisionassistantpng} />
+                          src={dailyPlanner} />
                     </Link>
                 </View>
                 <View
@@ -251,14 +254,14 @@ const Home = () => {
                     <Heading
                       level={6}
                       className="portfolio-heading">
-                        Do It Now
+                        Open Weather App
                     </Heading>
                     <Link
-                      href="https://bensdoitnow.herokuapp.com/">
+                      href="https://hoganrsherrow.github.io/open-weather/">
                         <Image
-                          alt="do-it-now screenshot"
+                          alt="open-weather screenshot"
                           className="portfolio-img"
-                          src={doitnowpng} />
+                          src={openWeather} />
                     </Link>
                 </View>
             </Flex>
@@ -274,13 +277,18 @@ const Home = () => {
             <Divider
               className="divider"
               orientation="horizontal" />
-            <View>
-              Excepteur excepteur et velit do ipsum ea exercitation cupidatat cupidatat ea. Dolore irure qui irure aute. Dolor sit eiusmod laboris mollit officia deserunt duis. Id nisi cillum duis eiusmod officia ullamco culpa quis. Magna dolore labore tempor tempor laborum eiusmod commodo veniam nisi.
+            <Text as="p">
+              Hello! My name is Hogan, and I am a developer currently seeking an entry level software engineering or 
+              fullstack web development position. Since graduating from Vanderbilt University in Nashville, TN, with a 
+              Bachelor of Arts in Economics and a minor in Chemistry, I have been working as an HR supervisor for a corporate 
+              division of Amazon HR known as the PXT OC.
 
-              Aliqua tempor velit minim qui velit anim culpa amet deserunt nulla ea sint. Exercitation et voluptate non commodo officia aliquip laboris in. Tempor occaecat id cillum eiusmod veniam reprehenderit irure elit cupidatat sunt culpa excepteur adipisicing elit. Voluptate adipisicing magna ad nostrud minim. Mollit do sint proident nisi amet do aliqua irure culpa in officia. Do duis labore sint et exercitation ea esse tempor pariatur Lorem.
-
-              Aliqua irure consequat ipsum sint incididunt elit amet reprehenderit aliquip proident fugiat. Fugiat velit in officia aute anim non consequat sit deserunt cupidatat velit magna. Minim officia cupidatat eiusmod qui enim et mollit eu. Minim ea officia magna exercitation esse cillum reprehenderit veniam eu officia. Ipsum et ut anim nisi incididunt laborum amet. Cupidatat eiusmod laborum do veniam proident ullamco ut enim cillum officia exercitation ullamco adipisicing nostrud. Adipisicing ut ea proident irure eiusmod amet nostrud.
-            </View>
+              <View as="br" />
+              In the spring of 2022, I returned to my alma mater and completed Vanderbilt's Full Stack Coding 
+              Bootcamp. The bootcamp focused on the MERN tech stack and also taught technologies such as SQL databases, 
+              GraphQL, Apollo Server, HTML5/CSS3, JQuery, and more. 
+    
+            </Text>
         </View>
         <View
           as="section"
@@ -294,7 +302,8 @@ const Home = () => {
               className="divider"
               orientation="horizontal" />
             <View>
-              Officia laborum ea esse excepteur id occaecat tempor culpa cupidatat labore cillum consectetur. Sint est proident adipisicing do id. Anim aliquip irure proident eu consequat dolore officia. Aliqua aliquip pariatur in et id. Anim enim reprehenderit consequat fugiat voluptate est duis et consectetur ea dolore incididunt. Ipsum laborum sint aliquip dolor sit ut reprehenderit. Nisi magna aliquip officia cillum.
+              This website was built using React and is hosted through AWS. This site utilizes 
+              the Amplify UI for React library.
             </View>
         </View>
       </View>
