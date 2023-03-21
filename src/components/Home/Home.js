@@ -1,30 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "@aws-amplify/ui-react/styles.css";
 import "../../App.css";
-import { API } from "aws-amplify";
 import {
-  Button,
   Flex,
   Heading,
   Image,
   Link,
-  Tabs,
-  TabItem,
   Text,
-  TextField,
   View,
-  withAuthenticator,
   Divider,
 } from "@aws-amplify/ui-react";
 import spaceapppng from "../../images/spaceapp.png";
 import decisionassistantpng from "../../images/decision-assistant.png";
-import doitnowpng from "../../images/do-it-now.png";
 import readme from "../../images/readme-generator.png";
 import teamprofile from "../../images/team-profile-generator.png";
 import employeetracker from "../../images/employee-tracker.png";
 import selfDrivingCar from "../../images/self-driving-car.png";
 import dailyPlanner from "../../images/daily-planner.png";
 import openWeather from "../../images/open-weather.png";
+import deepThoughts from "../../images/deep-thoughts.png";
+import photoPort from "../../images/photo-port.png";
 
 
 const Home = () => {
@@ -100,7 +95,7 @@ const Home = () => {
             <Heading
               className="portfolio-heading"
               level={4}>
-                Full Stack
+                MERN Stack
             </Heading>
             <Flex
               className="project-grouping"
@@ -112,14 +107,14 @@ const Home = () => {
                     <Heading
                       level={6}
                       className="portfolio-heading">
-                        MERN Stack
+                        Deep Thoughts
                     </Heading>
                     <Link
-                      href="https://carterwsheppard.github.io/space-app/">
+                      href="https://hogan-deep-thoughts.herokuapp.com/">
                         <Image
                           alt="spaceapp screenshot"
                           className="portfolio-img"
-                          src={spaceapppng} />
+                          src={deepThoughts} />
                     </Link>
                 </View>
                 <View
@@ -142,14 +137,14 @@ const Home = () => {
                     <Heading
                       level={6}
                       className="portfolio-heading">
-                        Do It Now
+                        Photographer Portfolio
                     </Heading>
                     <Link
-                      href="https://bensdoitnow.herokuapp.com/">
+                      href="https://hoganrsherrow.github.io/photo-port/">
                         <Image
-                          alt="do-it-now screenshot"
+                          alt="Phtographer Portfolio screenshot"
                           className="portfolio-img"
-                          src={doitnowpng} />
+                          src={photoPort} />
                     </Link>
                 </View>
             </Flex>
@@ -279,14 +274,22 @@ const Home = () => {
               orientation="horizontal" />
             <Text as="p">
               Hello! My name is Hogan, and I am a developer currently seeking an entry level software engineering or 
-              fullstack web development position. Since graduating from Vanderbilt University in Nashville, TN, with a 
-              Bachelor of Arts in Economics and a minor in Chemistry, I have been working as an HR supervisor for a corporate 
-              division of Amazon HR known as the PXT OC.
+              fullstack web development position. My most recent role was a fullstack developer for Hankook Tire America
+              Corporation where I spent most of my time working on B2B and internal portals that utilized JQuery/AJAX, HTML5, CSS3, and Redux
+              technologies for the frontend and Java, Spring framework, Oracle SQL DB, and Apache Tomcat for the backend.
+              All services were hosted through AWS EC2.
 
               <View as="br" />
-              In the spring of 2022, I returned to my alma mater and completed Vanderbilt's Full Stack Coding 
+              <View as="br" />
+              I am a graduate of Vanderbilt University in Nashville, TN, with a major in economics and a minor in chemistry. After graduation, I worked full-time for Amazon.com, Inc. as an HR Lead within their
+              PXT OC organization. In the spring of 2022, I returned to my alma mater and completed Vanderbilt's Full Stack Coding 
               Bootcamp. The bootcamp focused on the MERN tech stack and also taught technologies such as SQL databases, 
-              GraphQL, Apollo Server, HTML5/CSS3, JQuery, and more. 
+              GraphQL, Apollo Server, HTML5/CSS3, JQuery, and more.
+
+              <View as="br" />
+              <View as="br" />
+              If you have any questions or would like to collaborate on a coding project, please feel free to reach out on LinkedIn or through email!
+              Both links can be found below. 
     
             </Text>
         </View>
