@@ -25,6 +25,8 @@ import employeetracker from "../../images/employee-tracker.png";
 import selfDrivingCar from "../../images/self-driving-car.png";
 import dailyPlanner from "../../images/daily-planner.png";
 import openWeather from "../../images/open-weather.png";
+import deepThoughts from "../../images/deep-thoughts.png";
+import photoPort from "../../images/photo-port.png";
 
 
 const Home = () => {
@@ -112,14 +114,14 @@ const Home = () => {
                     <Heading
                       level={6}
                       className="portfolio-heading">
-                        MERN Stack
+                        Deep Thoughts
                     </Heading>
                     <Link
-                      href="https://carterwsheppard.github.io/space-app/">
+                      href="https://hogan-deep-thoughts.herokuapp.com/">
                         <Image
-                          alt="spaceapp screenshot"
+                          alt="Deep Thoughts screenshot"
                           className="portfolio-img"
-                          src={spaceapppng} />
+                          src={deepThoughts} />
                     </Link>
                 </View>
                 <View
@@ -142,14 +144,14 @@ const Home = () => {
                     <Heading
                       level={6}
                       className="portfolio-heading">
-                        Do It Now
+                        Photographer Portfolio
                     </Heading>
                     <Link
-                      href="https://bensdoitnow.herokuapp.com/">
+                      href="https://hoganrsherrow.github.io/photo-port/">
                         <Image
-                          alt="do-it-now screenshot"
+                          alt="Photo Portfolio screenshot"
                           className="portfolio-img"
-                          src={doitnowpng} />
+                          src={photoPort} />
                     </Link>
                 </View>
             </Flex>
